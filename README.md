@@ -9,6 +9,20 @@ In the current stage, the project can use only in the console log and only see s
 
 I have to add webpage with using HTML and CSS for this project later. (The Odin Project said...)
 
+# Project Overview2
+
+This is the Javascript foundations course in the Odin Project(https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors). 
+This time, I had to create real Webpage (not console) by using HTML / CSS / Javascript.
+
+I created very simple Rock Paper Scissors game (URL:https://hiros-dev.github.io/Rock-Paper-Scissors/).
+I don't add many CSS, but the game is working correctly. (I think this is most important thing more than add many fancy CSS)
+
+I have confident to prove my fundamental skills of HTML / CSS / Javascript through this project.
+
+# Screen Shot
+
+<img src="./screen.png"/>
+
 # What did I learn through this course
 
 Of course, I got a fundamental knowledge of Javascript like how to use function, what is number?, what is string?, what is object?, what is array?, etc, etc.
@@ -45,6 +59,14 @@ If you can write the Pseudocode, I think you already finished the almost project
 
 Finally, we write the programming code.
 Big problem later, simple problem earlier.
+
+# What did I learn through this course2
+
+I learned Javascript fundamentals like function or for loops though the project.
+And also, I learned how to use Git and GitHub(especially, how to use branch and how to merge).
+
+I think Git and GitHub skills is very important.
+And, I am very grad to get the knowledge.
 
 ## Summary
 

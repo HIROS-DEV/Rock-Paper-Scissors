@@ -10,28 +10,36 @@ const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
 const resetBtn = document.querySelector('#reset');
 
+let playerResult = document.querySelector('#player-result');
+let computerResult = document.querySelector('#computer-result');
+
 let resultText = document.createElement('p');
 
 function startGame() {
+	playerScore = 0;
+	computerScore = 0;
+	playerSelection = '';
+	computerSelection = '';
+
+	playerResult.innerText = 0;
+	computerResult.innerText = 0;
+	resultText.innerText = '';
+	resultText.style.color = 'black';
+
 	startBtn.classList.add('invisible');
 	rockBtn.classList.remove('invisible');
 	paperBtn.classList.remove('invisible');
 	scissorsBtn.classList.remove('invisible');
 	resetBtn.classList.remove('invisible');
-	resultText.innerText = '';
 }
 
 function resetGame() {
 	startBtn.classList.remove('invisible');
+	startBtn.textContent = 'Restart';
 	rockBtn.classList.add('invisible');
 	paperBtn.classList.add('invisible');
 	scissorsBtn.classList.add('invisible');
 	resetBtn.classList.add('invisible');
-
-	playerScore = 0;
-	computerScore = 0;
-	playerSelection = '';
-	computerSelection = '';
 }
 
 function getComputerChoice() {
@@ -44,12 +52,16 @@ function getComputerChoice() {
 function printResultForWin() {
 	playerScore += 1;
 	resultText.innerText = `You Win! ${playerSelection} wins ${computerSelection}`;
+	playerResult.innerText = playerScore;
+	computerResult.innerText = computerScore;
 	container.appendChild(resultText);
 }
 
 function printResultForLose() {
 	computerScore += 1;
 	resultText.innerText = `You Lose! ${playerSelection} beats ${computerSelection}`;
+	playerResult.innerText = playerScore;
+	computerResult.innerText = computerScore;
 	container.appendChild(resultText);
 }
 
@@ -57,17 +69,21 @@ function printResultForEven() {
 	playerScore += 0;
 	computerScore += 0;
 	resultText.innerText = `Even! ${playerSelection} evens ${computerSelection}`;
+	playerResult.innerText = playerScore;
+	computerResult.innerText = computerScore;
 	container.appendChild(resultText);
 }
 
 function printFinalResultForWin() {
-	resultText.innerText = `Final Result: You Win! Your score is ${playerScore}. Computer score is ${computerScore}`;
+	resultText.innerText = `You Win!`;
+	resultText.style.color = 'green';
 	container.appendChild(resultText);
 	resetGame();
 }
 
 function printFinalResultForLose() {
-	resultText.innerText = `Final Result: You Lose! Your score is ${playerScore}. Computer score is ${computerScore}`;
+	resultText.innerText = `You Lose!`;
+	resultText.style.color = 'red';
 	container.appendChild(resultText);
 	resetGame();
 }
